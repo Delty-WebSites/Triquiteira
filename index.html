@@ -1,206 +1,877 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
-        />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css" />
-        <script src="./js/jquery.min.js"></script>
-        <link rel="icon" href="./img/icon.png" />
-        <title>Food Delivery Landing Page</title>
-    </head>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white"> <a class="navbar-brand" href="./index.html"><img src="./img/logo.png"></a>
-        <button
-        class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="./index.html">Welcome<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="./index.html#menu">Today's Menu</a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="./login.html">Split Page</a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="./article.html">Article</a>
-                    </li>
-                </ul> <a href="https://github.com/wowthemesnet/template-fooddelivery-bootstrap-html/archive/master.zip"
-                class="btn btn-outline-dark">Download Template</a>
-            </div>
-    </nav>
-    
-    <body>
-        <div class="block hero1 my-auto" style="background-image:url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80);">
-            <div class="container-fluid text-center">
-                 <h1 class="display-2 text-white" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-offset="0">Bistrot Français</h1>
-                <p class="lead text-white" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="600">We are closed for the moment, but we will still deliver food at your place!</p>
-                <a
-                href="#menu" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
-                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">View Today's Menu</a>
-            </div>
-            <div class="clearfix"></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/jquery.min.js"></script>
+    <link rel="icon" href="./img/icon.png" />
+    <title>Lighthouse Menu</title>
+</head>
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white"> 
+    <a class="navbar-brand" href="./index.html">
+        <img src="./img/logo.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"> 
+                <a class="nav-link" href="./index.html">Início<span class="sr-only">(atual)</span></a>
+            </li>
+            <li class="nav-item"> 
+                <a class="nav-link" href="./index.html#menu">Menu de Hoje</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="block hero1 my-auto"
+        style="background-image:url(./img/background.png);">
+        <div class="container-fluid text-center">
+            <h1 class="display-2 text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">Lighthouse</h1>
+            <p class="lead text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Estamos abertos! Descubra o melhor da nossa ementa.</p>
+            <a href="#menu" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">Ver Menu de Hoje</a>
         </div>
-        <div class="maincontent">
-            <div class="container">
-                <section id="menu">
-                    <div class="block menu1">
-                        <div class="buttons-container"> <a href="#" class="button button--is-active" data-target="pizzaMenu">Pizzas</a>
-                            <a
-                            href="#" class="button" data-target="coffeeMenu">Drinks</a> <a href="#" class="button" data-target="noodlesMenu">Desserts</a>
-                        </div>
-                        <!-- Start Pizza Menu -->
-                        <div class="menu menu--is-visible" id="pizzaMenu" data-aos="fade-up">
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/pizza-1.png">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Cheese Pizza</h3> <span class="item__dots"></span> <span class="item__price">$15</span>
-                                    </div>
-                                    <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                        officia eaque nobis ut.</p>
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="1" data-name="Cheese Pizza" data-price="15" data-quantity="1"
-                                    data-image="./img/pizza-1.png">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/pizza-2.png">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Hot Pastrami</h3> <span class="item__dots"></span> <span class="item__price">$25</span>
-                                    </div>
-                                    <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                        officia eaque nobis ut.</p>
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="2" data-name="Hot Pastrami" data-price="25" data-quantity="1"
-                                    data-image="./img/pizza-2.png">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/pizza-3.png">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Classic Pizza</h3> <span class="item__dots"></span> <span class="item__price">$20</span>
-                                    </div>
-                                    <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                        officia eaque nobis ut.</p>
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="3" data-name="Classic Pizza" data-price="20" data-quantity="1"
-                                    data-image="./img/pizza-3.png">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/pizza-4.png">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Country Pizza</h3> <span class="item__dots"></span> <span class="item__price">$17</span>
-                                    </div>
-                                    <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                        officia eaque nobis ut.</p>
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="4" data-name="Country Pizza" data-price="17" data-quantity="1"
-                                    data-image="./img/pizza-4.png">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Pizza Menu -->
-                        <!-- Start Coffee Menu -->
-                        <div class="menu" id="coffeeMenu">
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Cappuccino</h3> <span class="item__dots"></span> <span class="item__price">$4</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Iced Coffee</h3> <span class="item__dots"></span> <span class="item__price">$5</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Café Latte</h3> <span class="item__dots"></span> <span class="item__price">$3</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Espresso</h3> <span class="item__dots"></span> <span class="item__price">$4</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                        </div>
-                        <!-- End Coffee Menu -->
-                        <!-- Start Noodles Menu -->
-                        <div class="menu" id="noodlesMenu">
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Chicken Noodles</h3> <span class="item__dots"></span> <span class="item__price">$16</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Egg Noodles</h3> <span class="item__dots"></span> <span class="item__price">$12</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Veg Noodles</h3> <span class="item__dots"></span> <span class="item__price">$10</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                            <div class="item">
-                                <div class="item__header">
-                                     <h3 class="item__title">Chuck Norris Noodles</h3> <span class="item__dots"></span> <span class="item__price">$20</span>
-                                </div>
-                                <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos harum
-                                    officia eaque nobis ut.</p>
-                            </div>
-                        </div>
-                        <!-- End Noodles Menu -->
+        <div class="clearfix"></div>
+    </div>
+    <div class="maincontent">
+        <div class="container">
+
+            <section id="menu">
+                <div class="block menu1">
+                    <div class="buttons-container">
+                        <!-- Entradas -->
+                        <a href="#" class="button button--is-active" data-target="tapasMenu">Tapas</a>
+                        <a href="#" class="button" data-target="snacksMenu">Triquiteiras</a>
+                        <a href="#" class="button" data-target="aperitifsMenu">Aperitivos</a>
+
+                        <!-- Comidas -->
+                        <a href="#" class="button button--is-active" data-target="tostasMenu">Tostas</a>
+                        <a href="#" class="button" data-target="burgersMenu">Hambúrgueres</a>
+                        <a href="#" class="button" data-target="francesinhasMenu">Francesinhas</a>
+                        <a href="#" class="button" data-target="pregosMenu">Pregos</a>
+                        <a href="#" class="button" data-target="saladsMenu">Saladas</a>
+                        <a href="#" class="button" data-target="brunchMenu">Brunch & Lunch</a>
+                        <a href="#" class="button" data-target="baguettesMenu">Baguetes</a>
+
+                        <!-- Bebidas -->
+                        <a href="#" class="button button--is-active" data-target="beveragesMenu">Águas e Sumos</a>
+                        <a href="#" class="button" data-target="beerMenu">Cerveja</a>
+                        <a href="#" class="button" data-target="sangriasMenu">Sangrias</a>
+                        <a href="#" class="button" data-target="cocktailsMenu">Cocktails</a>
+                        <a href="#" class="button" data-target="ginMenu">Gin</a>
+                        <a href="#" class="button" data-target="whiskyMenu">Whisky</a>
+                        <a href="#" class="button" data-target="cafeteriaMenu">Cafeteria</a>
+
                     </div>
-                    <!-- End block -->
-                    <script src="./js/mycart.js"></script>
-                    <script src="./js/mycart-custom.js"></script>
-                </section>
-            </div>
+
+                    <!-- Bebidas -->
+                    <div class="menu menu--is-visible" id="coffeeMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Água 50ml</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.20€</span>
+                            </div>
+                            <p class="item__description">*Descrição*</p>
+                        </div>
+                        <!-- Adicione outras bebidas aqui -->
+                    </div>
+
+
+                    <div class="menu menu--is-visible" id="tapasMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Bruschetta Lighthouse</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Bruschetta Triquiteira</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Pão de Alho</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Amêijoas</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">8.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Camarões ao Alho</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">9€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Moelinhas</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Panadinhos</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tábua de Queijos</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tábua de Enchidos</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">12€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tábua Mista</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">20€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Asinhas de Frango</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Chilli Bites</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Sticks de Queijo</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Bolinhas de Alheira com Queijo Brie</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Camarão em Massa Filó</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Francesinha Trinchada</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu" id="snacksMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira Virgem</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira Fogo no Rabo</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira Gordorosa e Formosa</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira Fitness</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira Virgem XL</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">8€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira XL</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu" id="aperitifsMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Licor Beirão</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Amêndoa Amarga</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Porto Tónico</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Baileys</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">CR&F</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Martini</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Vinho do Porto</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tostas -->
+                    <div class="menu menu--is-visible" id="tostasMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tosta Lighthouse</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">9€</span>
+                            </div>
+                            <p class="item__description">Bife de frango, mix de alface, tomate, bacon, parmesão e
+                                maionese.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tosta de Salmão</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                            <p class="item__description">Salmão fumado, abacate, rúcula, philadelphia e pesto.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Sandwich Club</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+                            <p class="item__description">Mix de alface, tomate, queijo, ovo estrelado, bacon e maionese.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tosta de Cogumelos</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">8€</span>
+                            </div>
+                            <p class="item__description">Rúcula, cogumelos salteados em maionese de alho e parmesão.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hambúrgueres -->
+                    <div class="menu" id="burgersMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Hambúrguer Lighthouse</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">12€</span>
+                            </div>
+                            <p class="item__description">Carne de vaca, iceberg, tomate, bacon, cheddar, ovo, cebola
+                                crocante e molho cocktail.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Hambúrguer Triquiteira</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                            <p class="item__description">Frango, iceberg, tomate, cebola roxa, queijo Brie, bacon e
+                                maionese de citrinos.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Hambúrguer Vegetariano</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">9€</span>
+                            </div>
+                            <p class="item__description">Hambúrguer de legumes, cogumelos, rúcula, tomate seco, cebola
+                                crocante e maionese vegetariana.</p>
+                        </div>
+                    </div>
+
+                    <!-- Francesinhas -->
+                    <div class="menu" id="francesinhasMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Francesinha de Alcatra</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">14€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Meia Francesinha de Alcatra</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Francesinha de Frango</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">12€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Meia Francesinha de Frango</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">9€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Francesinha Normal no Prato</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7.50€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pregos -->
+                    <div class="menu" id="pregosMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Prego Lighthouse</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">9€</span>
+                            </div>
+                            <p class="item__description">Pão, queijo, fiambre e ovo.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Prego Triquiteira</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">11€</span>
+                            </div>
+                            <p class="item__description">Pão, queijo da serra e presunto.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Prego B.O</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                            <p class="item__description">Pão, bacon e ovo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Saladas -->
+                    <div class="menu" id="saladsMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Salada de Frango</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+                            <p class="item__description">Mix de alface, tomate cherry, bacon, ovo cozido, queijo Brie,
+                                laranja e maionese de lima.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Salada de Camarão</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">11€</span>
+                            </div>
+                            <p class="item__description">Penne, rúcula, pepino, tomate cherry, mozarela e manga.</p>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Salada de Salmão e Abacate</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">12€</span>
+                            </div>
+                            <p class="item__description">Rúcula, pepino, tomate seco, burrata, abacate e pesto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Brunch & Lunch -->
+                    <div class="menu" id="brunchMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Prego no Prato</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">14€</span>
+                            </div>
+                            <p class="item__description">Bife de alcatra, batata frita, ovo e salada.</p>
+                        </div>
+                    </div>
+
+                    <!-- Baguetes -->
+                    <div class="menu" id="baguettesMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Baguete Americana</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Baguete de Atum</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Baguete de Delícias</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Baguete de Frango</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Águas e Sumos -->
+                    <div class="menu menu--is-visible" id="beveragesMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Água 50ml</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.20€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Água com Gás</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.40€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Água com Gás (sabores)</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.60€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Limonada</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Sumo de Laranja Natural</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Compal</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.80€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Ice Tea</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.80€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Refrigerantes</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.80€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Água Tónica</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Ginger Ale</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Red Bull</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cerveja -->
+                    <div class="menu" id="beerMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Fino</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.70€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Caneca 50cl</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2.70€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Martini com Cerveja</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tango</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.80€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Panaché</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.80€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Mini</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1.20€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Somersby</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2.70€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sangrias -->
+                    <div class="menu" id="sangriasMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Maracujá</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">20€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Frutos Vermelhos</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">20€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Tropical</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">23€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Abacaxi e Hortelã</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">23€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cocktails -->
+                    <div class="menu" id="cocktailsMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Lighthouse</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Triquiteira</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Caipirinha</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Caipirinha Sabores</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Mojito</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Mojito Sabores</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Moscow Mule</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">8€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gin -->
+                    <div class="menu" id="ginMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Lighthouse</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Beefeater</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Nordés</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Puerto de Indias</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Bulldog</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">8€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Whisky -->
+                    <div class="menu" id="whiskyMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">JB</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Jack Daniels</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Jack Daniels Maçã</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Jack Daniels Honey</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5.50€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Cardhu</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cafeteria -->
+                    <div class="menu" id="cafeteriaMenu">
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Café</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">0.85€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Carioca de Café</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">0.70€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Descafeinado</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">0.85€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Abatanado</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">1€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Cevada</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">0.80€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Carioca de Limão</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">0.70€</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__header">
+                                <h3 class="item__title">Capuccino</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2.50€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+            <script src="./js/mycart.js"></script>
+            <script src="./js/mycart-custom.js"></script>
+
         </div>
-        <div class="nav-item my-cart-icon">
-            <img src="./img/cart.svg" style="width:20px;"> <span class="badge badge-notify my-cart-badge"> </span>
-        </div>
-        <footer class="block footer1 footer text-center">
-            <p>&copy; <a href="https://bootstrapstarter.com/bootstrap-templates/template-fooddelivery-bootstrap-html/">"Food Delivery HTML Template"</a> by
-                WowThemes.net</p>
-        </footer>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script src="js/custom-general.js"></script>
-    </body>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/custom-general.js"></script>
+</body>
 
 </html>
