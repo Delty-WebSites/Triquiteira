@@ -35,14 +35,29 @@
     <div class="block hero1 my-auto"
         style="background-image:url(./img/background.png);">
         <div class="container-fluid text-center">
-            <h1 class="display-5 text-white text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">Lighthouse</h1>
-            <p class="lead text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Estamos abertos! Descubra o melhor da nossa ementa.</p>
-            <a href="#menu" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
-                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">Ver Menu agora!</a><br>
-            <a href="./Docs/Ementa Lighthouse By Triquiteira.pdf" target="_blank" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
-                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">Eu sou à moda antiga!</a>
+            <!-- Adiciona uma imagem centralizada e responsiva -->
+            <img src="./img/icon.png" alt="Logo" class="img-fluid mx-auto d-block" style="max-width: 200px;" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
             
+            <!-- Atualiza o texto com uma fonte personalizada -->
+            <h1 class="display-5 text-white text-center custom-font" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+                Menu
+            </h1>
+            
+            <p class="lead text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                Estamos abertos! Descubra o melhor da nossa ementa.
+            </p>
+        
+            <a href="#menu" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                Ver Menu agora!
+            </a><br>
+        
+            <a href="./Docs/Ementa Lighthouse By Triquiteira.pdf" target="_blank" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                Eu sou à moda antiga!
+            </a>
         </div>
+        
         <div class="clearfix"></div>
     </div>
     <div class="maincontent">
@@ -887,6 +902,49 @@
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuLink = document.querySelector('.nav-link[href="./index.html#menu"]');
+    
+            if (menuLink) {
+                menuLink.addEventListener('click', function (event) {
+                    event.preventDefault(); // Previne o comportamento padrão do link
+                    const targetId = menuLink.getAttribute('href').split('#')[1]; // Obtém o ID da seção (#menu)
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        // Animação de rolagem suave
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const smoothScrollButtons = document.querySelectorAll('a[href="#menu"]');
+    
+            smoothScrollButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Previne o comportamento padrão do link
+                    const targetId = button.getAttribute('href').substring(1); // Obtém o ID da seção (#menu)
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        // Animação de rolagem suave
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('.button');
