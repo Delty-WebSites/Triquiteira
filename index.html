@@ -38,7 +38,10 @@
             <h1 class="display-5 text-white text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">Lighthouse</h1>
             <p class="lead text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Estamos abertos! Descubra o melhor da nossa ementa.</p>
             <a href="#menu" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
-                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">Ver Menu de Hoje</a>
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">Ver Menu agora!</a><br>
+            <a href="./Docs/Ementa Lighthouse By Triquiteira.pdf" target="_blank" class="btn-text lead d-inline-block text-white border-top border-bottom mt-4 pt-1 pb-1"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">Eu sou à moda antiga!</a>
+            
         </div>
         <div class="clearfix"></div>
     </div>
@@ -63,7 +66,7 @@
                             <h3 class="category-title mb-2">Comidas</h3>
                             <div class="d-flex justify-content-center flex-wrap gap-2">
                                 <a href="#" class="button" data-target="tostasMenu">Tostas</a>
-                                <a href="#" class="button button--is-active" data-target="burgersMenu">Hambúrgueres</a>
+                                <a href="#" class="button menu--is-visible button--is-active" data-target="burgersMenu">Hambúrgueres</a>
                                 <a href="#" class="button" data-target="francesinhasMenu">Francesinhas</a>
                                 <a href="#" class="button" data-target="pregosMenu">Pregos</a>
                                 <a href="#" class="button" data-target="saladsMenu">Saladas</a>
@@ -90,7 +93,7 @@
                     
 
                     <!-- Bebidas 
-                    <div class="menu menu--is-visible" id="coffeeMenu">
+                    <div class="menu" id="coffeeMenu">
                         <div class="item">
                             <div class="item__header">
                                 <h3 class="item__title">Água 50ml</h3>
@@ -102,7 +105,7 @@
                     </div>-->
 
 
-                    <div class="menu menu--is-visible" id="tapasMenu">
+                    <div class="menu" id="tapasMenu">
                         <div class="item">
                             <div class="item__header">
                                 <h3 class="item__title">Bruschetta Lighthouse</h3>
@@ -315,7 +318,7 @@
                     </div>
 
                     <!-- Tostas -->
-                    <div class="menu menu--is-visible" id="tostasMenu">
+                    <div class="menu " id="tostasMenu">
                         <div class="item">
                             <div class="item__header">
                                 <h3 class="item__title">Tosta Lighthouse</h3>
@@ -353,7 +356,7 @@
                     </div>
 
                     <!-- Hambúrgueres -->
-                    <div class="menu" id="burgersMenu">
+                    <div class="menu menu--is-visible" id="burgersMenu">
                         <div class="item">
                             <div class="item__header">
                                 <h3 class="item__title">Hambúrguer Lighthouse</h3>
@@ -524,7 +527,7 @@
                     </div>
 
                     <!-- Águas e Sumos -->
-                    <div class="menu menu--is-visible" id="beveragesMenu">
+                    <div class="menu " id="beveragesMenu">
                         <div class="item">
                             <div class="item__header">
                                 <h3 class="item__title">Água 50ml</h3>
@@ -884,6 +887,28 @@
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.button');
+    
+            buttons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Previne o comportamento padrão do link
+                    const targetId = this.getAttribute('data-target'); // Obtém o ID do menu alvo
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        // Animação de rolagem suave
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
     <script>
         AOS.init();
     </script>
